@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+    <h1>Tirando Média:</h1>
+
+    <p id="resultado">Resultado: </p>
+    <script>
+        let totalDeNotas = parseFloat(prompt("Quantas notas você quer tirar a média?"));
+        let soma = 0;
+        for(i = 0; i < totalDeNotas; ){
+            let nota = parseFloat(prompt("Informe uma nota: "));
+            soma = soma + nota;
+            i++;
+        };
+        
+        let media = soma / totalDeNotas;
+
+        document.getElementById("resultado").innerText = "Sua média é: " + media;
+
+    </script>
+</body>
+</html>
