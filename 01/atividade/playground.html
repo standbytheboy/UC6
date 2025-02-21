@@ -13,10 +13,9 @@
         let totalDeNotas = parseFloat(prompt("Quantas notas você quer tirar a média?"));
         let soma = 0;
 
-        for(i = 1; i <= totalDeNotas; ){
+        for(i = 1; i <= totalDeNotas; i++){
             let nota = parseFloat(prompt(`Informe a nota: ${i}`));
             soma = soma + nota;
-            i++;
         };
         
         let media = soma / totalDeNotas;
