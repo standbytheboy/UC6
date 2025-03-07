@@ -31,7 +31,7 @@ function attListaReserva() {
 
     reservas.forEach((reserva, index) => {
         let li = document.createElement("li");
-        li.innerHTML = `${reserva.nome}, ${reserva.data} <button onclick="removerReserva(${index})">X</button>`;
+        li.innerHTML = `${reserva.nome}, ${reserva.data} <button class="remover" onclick="removerReserva(${index})">X</button>`;
         lista.appendChild(li);
     });
 }
