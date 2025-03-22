@@ -22,4 +22,4 @@ function buscaBinaria(array, valor) {
     return -1;
 }
 
-console.log(buscaBinaria(numeros, 10)); 
+console.log(buscaBinaria(numeros, 30)); 
