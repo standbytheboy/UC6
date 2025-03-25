@@ -7,7 +7,7 @@ let pessoas = [
     { nome: "Fernanda", nascimento: "1992-10-30", tipoSanguineo: "B+", cpf: "34567890122", telefone: "977777777" }
 ];
 
-function bubbleSort(array) {
+export function bubbleSort(array) {
 
     for (let limite = array.length - 1; limite > 0; limite--) { // diminui o tamanho/comprimento do array para -1, pois assim que o código funciona, o maior número vai sempre para o índice final
         let verificacaoCompleta = true;
@@ -26,7 +26,7 @@ function bubbleSort(array) {
     return array;
 }
 
-function buscaBinaria(array, valor) {
+export function buscaBinaria(array, valor) {
     let inicio = 0;
     let final = array.length - 1;
 
@@ -44,5 +44,5 @@ function buscaBinaria(array, valor) {
     return -1;
 }
 
-console.log(bubbleSort(pessoas));
-console.log(buscaBinaria(pessoas, "João"))
+// console.log(bubbleSort(pessoas));
+// console.log(buscaBinaria(pessoas, "João"))
