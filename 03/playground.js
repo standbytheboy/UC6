@@ -1,4 +1,3 @@
-<script>
     const MAIOR_IDADE = 18;
     const IDADE_PERMISSAO_TRABALHO = 14;
 
@@ -37,4 +36,3 @@
         default:
             console.log("Número Inválido");
     }
-</script>
