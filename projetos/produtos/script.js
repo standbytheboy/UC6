@@ -1,5 +1,5 @@
 import { BancoDeDados } from "./BancoDeDados.js";
-import { Produto } from "./Produtos.js";
+import { Produto } from "./Produto.js";
 
 // buscar os dados da tela quando o usuário "salvar"
 document.getElementById('formProduto').addEventListener('submit', (e) => {
