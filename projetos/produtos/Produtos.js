@@ -10,7 +10,10 @@ if (produtos.length === 0) {
         li.textContent = p.toString();
 
         const btnEditar = document.createElement("button");
-        btnEditar.textContent = "Editar"
+        btnEditar.textContent = "Editar";
+        btnEditar.onclick = () => {
+            window.location.href = `index.html?id=${p.id}` // navega para a tela inicial
+        }
         
         const btnExcluir = document.createElement("button");
         btnExcluir.textContent = "Excluir"
@@ -18,7 +21,6 @@ if (produtos.length === 0) {
             BancoDeDados.excluir(p.id);
             window.location.reload(); // recarrega os dados na tela, depois de excluir o id, retira o item da tela
         }
-        
 
         li.append(btnEditar, btnExcluir);
         ul.appendChild(li);

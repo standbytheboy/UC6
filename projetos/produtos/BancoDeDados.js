@@ -26,13 +26,21 @@ export class BancoDeDados {
         return produtosCadastrados.sort((a, b) => a.id - b.id);
     }
 
-    buscarPorId(id) {
-
+    static buscarPorId(id) {
+        const produtoJson = localStorage.getItem(id); // pega o id do produto no local storage
+        const dados = JSON.parse(produtoJson); // converte o produto em json
+        return Produto.fromJSON(dados); // usa a função fromJSON para transformar o produto em um objeto do tipo produto
     }
 
     // UPDATE
-    atualizar(produtoAtualizado) {
-
+    static atualizar(produtoAtualizado) {
+        localStorage.setItem(produtoAtualizado.id, JSON.stringify({
+            id: produtoAtualizado.id,
+            nome: produtoAtualizado.nome,
+            preco: produtoAtualizado.preco,
+            peso: produtoAtualizado.peso,
+            validade: produtoAtualizado.validade
+        }));
     }
 
     //DELETE
